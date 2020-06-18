@@ -2,6 +2,7 @@ pipeline {
 	  environment {
 		registry = "nairsreenesh/devopscapstone"
 		registryCredential = 'dockerhub'
+		dockerImage=''
 	  }
      agent any
      stages {
@@ -22,9 +23,18 @@ pipeline {
          stage('Building image') {
               steps {
 		      sh 'sudo usermod -aG docker ${USER}'
-		      sh 'sudo docker build -t ${registry} .'
+		      sh 'dockerImage = sudo docker build -t ${registry} .'
 		      
 				  }
-         }		 
+         }
+		 stage('Deploy Image') {
+			  steps{
+				 script {
+					docker.withRegistry( '', registryCredential ) {
+					dockerImage.push()
+				  }
+				}
+			  }
+		}			 
 	}
 }
