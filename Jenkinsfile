@@ -30,8 +30,8 @@ pipeline {
 		 stage('Deploy Image') {
 			  steps{
 				 script {
-					 docker.withRegistry( '', registryCredential ) 
-					 docker push ${registry}+":$BUILD_ID"
+					 docker.withRegistry( '', registryCredential ) {
+						 docker push ${registry}+":$BUILD_ID"}
 				}
 			  }
 		}			 
