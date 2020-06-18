@@ -31,7 +31,8 @@ pipeline {
 			  steps{
 				 script {
 					 sudo docker.withRegistry( '', registryCredential ) {
-						sudo docker push $registry:$BUILD_ID }
+						 sh 'whoami'
+						 sh 'sudo docker push $registry:$BUILD_ID' }
 				}
 			  }
 		}			 
