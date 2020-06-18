@@ -6,7 +6,7 @@ pipeline {
                   sh 'python3 -m venv venv'
                   sh '. venv/bin/activate'
                   sh 'make install'
-				  sh 'Install dependencies complete'
+				  sh 'echo "Install dependencies complete"'
               }
          }
          stage('Lint HTML') {
