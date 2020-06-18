@@ -23,16 +23,15 @@ pipeline {
          stage('Building image') {
               steps {
 		      sh 'sudo usermod -aG docker ${USER}'
-		      sh 'dockerImage = sudo docker build -t ${registry} .'
+		      sh 'sudo docker build -t ${registry}+":$BUILD_ID" .'
 		      
 				  }
          }
 		 stage('Deploy Image') {
 			  steps{
 				 script {
-					docker.withRegistry( '', registryCredential ) {
-					dockerImage.push()
-				  }
+					 docker.withRegistry( '', registryCredential ) 
+					 docker push ${registry}+":$BUILD_ID"
 				}
 			  }
 		}			 
