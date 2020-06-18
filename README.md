@@ -46,7 +46,7 @@ make install
 *  **[Dockerfile](./final-project-server-parameter.json)**:  Docker can build images automatically by reading the instructions from a  `Dockerfile`. The Dockerfile contains all the commands a user could call on the command line to assemble an image.To view the contents of the  `Dockerfile`  type:  `cat Dockerfile`. You can edit any file by opening it in a text editor and saving it
 
 *  **[Jenkinsfile](./Jenskinsfile)**:  Has the entire CICD logic called out in steps to implement the features of linting, docker image creation, docker image upload , replication controller .loadbalancer 
-*
+
 *  **[EKScluster/Jenkinsfile](./EKScluster/Jenskinsfile)**:  Has the logic to create the initiate the kubernetes server.
 
 
