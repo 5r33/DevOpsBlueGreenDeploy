@@ -21,7 +21,7 @@ pipeline {
          }	     
          stage('Building image') {
               steps {
-		      sh 'docker build -t nairsreenesh/devopscapstone .'
+		      sh 'sudo docker build -t nairsreenesh/devopscapstone .'
 				  }
          }		 
 	}
