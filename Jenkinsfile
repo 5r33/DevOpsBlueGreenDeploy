@@ -1,4 +1,8 @@
 pipeline {
+	  environment {
+		registry = "nairsreenesh/devopscapstone"
+		registryCredential = ‘dockerhub’
+	  }
      agent any
      stages {
          stage('install dependencies') {
@@ -15,12 +19,11 @@ pipeline {
 				  sh 'echo "Linting complete"'
               }
          }	     
-         stage('Upload to AWS') {
+         stage('Building image') {
               steps {
-                  withAWS(region:'us-east-2',credentials:'aws-static') {
-                  sh 'echo "Uploading content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'staticudacity')
-                  }
+				script {
+				  docker.build registry + ":$BUILD_NUMBER"
+				}
               }
          }		 
 		}
