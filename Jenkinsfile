@@ -21,7 +21,7 @@ pipeline {
          }	     
          stage('Building image') {
               steps {
-		      sh 'whoami' 
+		      sh 'docker build -t nairsreenesh/devopscapstone .'
 		      
 				  }
          }		 
