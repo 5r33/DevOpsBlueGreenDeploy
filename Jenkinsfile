@@ -22,7 +22,7 @@ pipeline {
          stage('Building image') {
               steps {
 		      sh 'sudo usermod -aG docker ${USER}'
-		      sh 'docker build -t ${registry} .'
+		      sh 'sudo docker build -t ${registry} .'
 		      
 				  }
          }		 
