@@ -29,11 +29,9 @@ pipeline {
          }
 		 stage('Deploy Image') {
 			  steps{
-				 script {
-					 sudo docker.withRegistry( '', registryCredential ) {
+					 sh 'sudo docker.withRegistry( '', registryCredential ) '{
 						 sh 'whoami'
 						  }
-				}
 			  }
 		}			 
 	}
