@@ -1,0 +1,12 @@
++ sudo usermod -aG docker jenkins
++ sudo docker build -t nairsreenesh/devopscapstone:59 .
+Sending build context to Docker daemon  5.998MB
+Step 1/3 : FROM nginx
+ ---> 2622e6cca7eb
+Step 2/3 : RUN rm /usr/share/nginx/html/index.html
+ ---> Using cache
+ ---> bed46e2eee86
+Step 3/3 : COPY index.html /usr/share/nginx/html
+ ---> a060b960594a
+Successfully built a060b960594a
+Successfully tagged nairsreenesh/devopscapstone:59

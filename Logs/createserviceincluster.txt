@@ -1,0 +1,2 @@
++ kubectl apply -f ./blue-service.json
+service/bluegreenlb configured

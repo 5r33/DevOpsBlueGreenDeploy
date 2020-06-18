@@ -1,0 +1,26 @@
++ sudo docker login -u **** -p ****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
++ sudo docker push ****/devopscapstone:59
+The push refers to repository [docker.io/****/devopscapstone]
+c6fe13defaa3: Preparing
+538d44d92784: Preparing
+f978b9ed3f26: Preparing
+9040af41bb66: Preparing
+7c7d7f446182: Preparing
+d4cf327d8ef5: Preparing
+13cb14c2acd3: Preparing
+d4cf327d8ef5: Waiting
+13cb14c2acd3: Waiting
+f978b9ed3f26: Layer already exists
+7c7d7f446182: Layer already exists
+9040af41bb66: Layer already exists
+538d44d92784: Layer already exists
+13cb14c2acd3: Layer already exists
+d4cf327d8ef5: Layer already exists
+c6fe13defaa3: Pushed
+59: digest: sha256:a327b919c7ea6779e66483f638c3e61a6faca06f26d243b6c1d9628b2495b005 size: 1776

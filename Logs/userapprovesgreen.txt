@@ -1,0 +1,3 @@
+Ready to redirect traffic to green?
+Proceed or Abort
+Approved by sree
