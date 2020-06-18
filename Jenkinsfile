@@ -22,8 +22,7 @@ pipeline {
          stage('Building image') {
               steps {
 		      sh 'sudo usermod -aG docker ${USER}'
-		      sh 'su -s ${USER}'
-		      sh 'docker build -t nairsreenesh/devopscapstone .'
+		      sh 'docker build -t ${registry} .'
 		      
 				  }
          }		 
