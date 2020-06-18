@@ -1,7 +1,7 @@
 pipeline {
 	  environment {
 		registry = "nairsreenesh/devopscapstone"
-		registryCredential = ‘dockerhub’
+		registryCredential = 'dockerhub'
 	  }
      agent any
      stages {
