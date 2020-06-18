@@ -21,11 +21,8 @@ pipeline {
          }	     
          stage('Building image') {
               steps {
-		      
-				script {
-				  docker build -t registry .
-				}
-              }
+		      sh 'docker build -t registry  .'
+				  }
          }		 
-		}
 	}
+}
